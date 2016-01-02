@@ -1,5 +1,7 @@
 # matching
 
+## Setup
+
 If you haven't setup virtualenv, see http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvironments-ref
 
 To fire up the virtual environment, from the root source directory run the following command
@@ -21,4 +23,12 @@ That should install the latest required dependencies. If you add additional depe
 pip freeze > requirements.txt
 ```
 To add them to the requirements.txt and then commit.
+
+## Starting the Web Server
+
+To actually view the app running locally, use the following command:
+```
+python manage.py runserver
+```
+
 
