@@ -51,12 +51,3 @@ python manage.py runserver
 
 ## Debugging
 
-I've gotten the error:
-```
-ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused
-```
-when the mongodb service is not running. To enable it, run:
-```
-brew services start mongodb
-```
-
