@@ -45,6 +45,12 @@ Then syncdb
 ```
 ./manage.py syncdb
 ```
+Create a super user:
+```
+./manage.py createsuperuser --username=tutesadmin --email=hapgilmore23@gmail.com
+```
+And you'll be prompted for a password.
+
 
 ## Starting the Web Server
 
