@@ -41,12 +41,20 @@ Or, if you don't want/need launchctl, you can just run:
 ```
   mongod --config /usr/local/etc/mongod.conf
 ```
+Then syncdb
+```
+./manage.py syncdb
+```
 
 ## Starting the Web Server
 
 To actually view the app running locally, use the following command:
 ```
 python manage.py runserver
+```
+In your web browser go to:
+```
+http://127.0.0.1:8000/admin/
 ```
 
 ## Debugging
