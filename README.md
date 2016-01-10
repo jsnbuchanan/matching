@@ -24,6 +24,15 @@ pip freeze > requirements.txt
 ```
 To add them to the requirements.txt and then commit.
 
+### Bower managed dependencies
+
+Javascript and other client side libraries will be managed by bower.
+
+To import those dependencies run:
+```
+./manage.py bower install
+```
+
 ### Setting up MongoDb
 I also had to install MongoDb with brew, using the following command:
 ```
@@ -47,7 +56,7 @@ Then syncdb
 ```
 Create a super user:
 ```
-./manage.py createsuperuser --username=tutesadmin --email=hapgilmore23@gmail.com
+./manage.py createsuperuser --username=totesadmin --email=hapgilmore23@gmail.com
 ```
 And you'll be prompted for a password.
 
