@@ -60,6 +60,9 @@ Create a super user:
 ```
 And you'll be prompted for a password.
 
+#### MongoDb is NOT a Relational Database
+
+MongoDb is a different type of database. Far different from the relational databases you may be used to. See the tutorial at https://django-mongodb-engine.readthedocs.org/en/latest/tutorial.html for a quick primer.
 
 ## Starting the Web Server
 
