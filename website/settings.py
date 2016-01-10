@@ -1,4 +1,4 @@
-# Django settings for website project.
+ # Django settings for website project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -117,6 +117,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_mongodb_engine',
     'social_auth',
+    'polls',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
