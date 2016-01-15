@@ -13,6 +13,12 @@ In my case
 ```
 source venv/bin/activate
 ```
+
+Install the django@non-rel package:
+```
+pip install git+https://github.com/django-nonrel/django@nonrel-1.5
+```
+
 Then run:
 ```
 pip install -r requirements.txt
