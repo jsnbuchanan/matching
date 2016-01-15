@@ -16,5 +16,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'', include('social_auth.urls')),
-    url(r'^polls', 'polls.views.home')
+
+    url(r'^match/results', 'match.views.results'),
+    url(r'^match/profile', 'match.views.profile'),
+    url(r'^match/', 'match.views.home'),
 )

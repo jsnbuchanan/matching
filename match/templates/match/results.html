@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+    <head>
+        <title>Match!</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <nav>
+            <a href="/match/profile">Profile</a>
+            <a href="/match/search">Search</a>
+            <a href="/match/results">Results</a>
+        </nav>
+
+        <h1>Results</h1>
+        {%  for profile in profiles %}
+            <article>
+{#                {% try: profile.images %}#}
+{#                {%      image = profile.images[0] %}#}
+{#                {% except: NameError %}#}
+{#                {%      image = 'img/profile.jpg' %}#}
+
+                <img src="{% static 'img/profile.jpg' %}" alt="profile image">
+                <h3>{{ profile.name }}</h3>
+                <p>{{ profile.description }}</p>
+            </article>
+        {%  endfor %}
+        <script type="text/javascript" src="{% static 'boostrap/dist/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

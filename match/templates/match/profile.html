@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>Match!</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <nav>
+            <a href="/match/profile">Profile</a>
+            <a href="/match/search">Search</a>
+            <a href="/match/results">Results</a>
+        </nav>
+
+        <h1>Profile</h1>
+        <article>
+            {% for image in profile.images %}
+                <img src="{% static image %}" alt="">
+            {% endfor %}
+            <h3>{{ profile.name }}</h3>
+            <p>{{ profile.description }}</p>
+        </article>
+        <script type="text/javascript" src="{% static 'boostrap/dist/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

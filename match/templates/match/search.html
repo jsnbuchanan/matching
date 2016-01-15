@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+    <head>
+        <title>Match!</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <nav>
+            <a href="/match/profile">Profile</a>
+            <a href="/match/search">Search</a>
+            <a href="/match/results">Results</a>
+        </nav>
+        <h1>Welcome to Match</h1>
+        <form action="/match/results">
+            <input type="text">
+            <button type="submit">go</button>
+        </form>
+        <script type="text/javascript" src="{% static 'boostrap/dist/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>
