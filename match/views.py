@@ -3,9 +3,9 @@ from django.http import HttpResponse
 
 christina = {'name':'Christina',
                        'description':'sexy funny kitty wrangler',
-                       'images':['img/profile-samples/christina.jpg',
-                                 'img/profile-samples/gilmores.jpg',
-                                 'img/profile-samples/kitties.jpg']}
+                       'images':['img/profiles-samples/christina.jpg',
+                                 'img/profiles-samples/gilmores.jpg',
+                                 'img/profiles-samples/kitties.jpg']}
 
 jason = {'name':'Jason','description':'robust healthy male'}
 ian = {'name':'Ian','description':'wickedly smart beneficent mastermind'}
