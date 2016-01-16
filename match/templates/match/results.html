@@ -22,7 +22,7 @@
         {#                {% except: NameError %}#}
         {#                {%      image = 'img/profile.jpg' %}#}
 
-                        <img src="{% static 'img/profile.jpg' %}" alt="{{ profile.name }}" class="img-circle img-responsive">
+                        <img src="{% static profile.images.0 %}" alt="{{ profile.name }}" class="img-circle img-responsive">
                         <h4>{{ profile.name }}</h4>
                         <span class="text-muted">{{ profile.description }}</span>
                     </div>
