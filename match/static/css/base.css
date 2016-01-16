@@ -17,6 +17,9 @@ body {
     max-width:200px;
     height:200px;
 }
+.profile-container {
+    padding-top:20px;
+}
 .images {
     border-radius:25px;
     overflow: hidden;
