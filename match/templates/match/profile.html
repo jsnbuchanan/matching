@@ -10,11 +10,14 @@
 {% endblock %}
 
 {% block page %}
-        <article>
-            {% for image in profile.images %}
-                <img src="{% static image %}" alt="">
-            {% endfor %}
+        <div class="container text-center">
+            <h1>{{ profile.name }}</h1>
+            <div class="images">
+                {% for image in profile.images %}
+                    <img src="{% static image %}" class="img-responsive" alt=""/>
+                {% endfor %}
+            </div>
             <h3>{{ profile.name }}</h3>
             <p>{{ profile.description }}</p>
-        </article>
+        </div>
 {% endblock %}

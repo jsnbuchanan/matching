@@ -17,6 +17,20 @@ body {
     max-width:200px;
     height:200px;
 }
+.images {
+    overflow: hidden;
+    width:520px;
+    margin:0 auto;
+}
+.images img {
+    width:150px;
+    display:inline-block;
+    float:left;
+}
+.images img:first-child {
+    height:300px;
+    width:auto;
+}
 footer {
   text-align: center;
 }
