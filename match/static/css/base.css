@@ -18,8 +18,9 @@ body {
     height:200px;
 }
 .images {
+    border-radius:25px;
     overflow: hidden;
-    width:520px;
+    width:450px;
     margin:0 auto;
 }
 .images img {
