@@ -15,16 +15,18 @@
         <p>displaying {{ profiles | length }} of {{ profiles | length }}</p>
         <div class="row placeholders">
             {%  for profile in profiles %}
-                <div class="profile col-xs-6 col-sm-3 placeholder">
-    {#                {% try: profile.images %}#}
-    {#                {%      image = profile.images[0] %}#}
-    {#                {% except: NameError %}#}
-    {#                {%      image = 'img/profile.jpg' %}#}
+                <a href="/profile">
+                    <div class="profile col-xs-6 col-sm-3 placeholder">
+        {#                {% try: profile.images %}#}
+        {#                {%      image = profile.images[0] %}#}
+        {#                {% except: NameError %}#}
+        {#                {%      image = 'img/profile.jpg' %}#}
 
-                    <img src="{% static 'img/profile.jpg' %}" alt="{{ profile.name }}" class="img-circle img-responsive">
-                    <h4>{{ profile.name }}</h4>
-                    <span class="text-muted">{{ profile.description }}</span>
-                </div>
+                        <img src="{% static 'img/profile.jpg' %}" alt="{{ profile.name }}" class="img-circle img-responsive">
+                        <h4>{{ profile.name }}</h4>
+                        <span class="text-muted">{{ profile.description }}</span>
+                    </div>
+                </a>
             {%  endfor %}
         </div>
     </div>
