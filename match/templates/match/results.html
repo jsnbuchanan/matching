@@ -17,11 +17,6 @@
             {%  for profile in profiles %}
                 <a href="/profile">
                     <div class="profile col-xs-6 col-sm-3 placeholder">
-        {#                {% try: profile.images %}#}
-        {#                {%      image = profile.images[0] %}#}
-        {#                {% except: NameError %}#}
-        {#                {%      image = 'img/profile.jpg' %}#}
-
                         <img src="{% static profile.images.0 %}" alt="{{ profile.name }}" class="img-circle img-responsive">
                         <h4>{{ profile.name }}</h4>
                         <span class="text-muted">{{ profile.description }}</span>
