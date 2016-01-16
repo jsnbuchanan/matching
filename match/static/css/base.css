@@ -8,6 +8,15 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+.profile {
+    margin:2em 0;
+    text-align:center;
+}
+.profile img {
+    margin:0 auto;
+    max-width:200px;
+    height:200px;
+}
 footer {
   text-align: center;
 }

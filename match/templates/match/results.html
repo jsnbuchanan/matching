@@ -10,16 +10,22 @@
 {% endblock %}
 
 {% block page %}
-    {%  for profile in profiles %}
-        <article>
-{#                {% try: profile.images %}#}
-{#                {%      image = profile.images[0] %}#}
-{#                {% except: NameError %}#}
-{#                {%      image = 'img/profile.jpg' %}#}
+    <div class="container">
+        <h1>Results</h1>
+        <p>displaying {{ profiles | length }} of {{ profiles | length }}</p>
+        <div class="row placeholders">
+            {%  for profile in profiles %}
+                <div class="profile col-xs-6 col-sm-3 placeholder">
+    {#                {% try: profile.images %}#}
+    {#                {%      image = profile.images[0] %}#}
+    {#                {% except: NameError %}#}
+    {#                {%      image = 'img/profile.jpg' %}#}
 
-            <img src="{% static 'img/profile.jpg' %}" alt="profile image">
-            <h3>{{ profile.name }}</h3>
-            <p>{{ profile.description }}</p>
-        </article>
-    {%  endfor %}
+                    <img src="{% static 'img/profile.jpg' %}" alt="{{ profile.name }}" class="img-circle img-responsive">
+                    <h4>{{ profile.name }}</h4>
+                    <span class="text-muted">{{ profile.description }}</span>
+                </div>
+            {%  endfor %}
+        </div>
+    </div>
 {% endblock %}
