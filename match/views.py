@@ -1,7 +1,7 @@
 import logging
 
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 
 logger = logging.getLogger(__name__)
 
@@ -29,6 +29,8 @@ amy = {'name':'Amy','description':'amazon warrior princess',
                  'img/profiles-samples/amy-savanah.jpg']
       }
 
+match_profiles = {'profiles':[christina, ian, jason, amy]}
+
 # Create your views here.
 
 
@@ -40,12 +42,21 @@ def profiles(request):
     return render(request, "match/profiles.html", {'profile':christina})
 
 
-def profile(request):
-    return render(request, "match/profile.html", {'profile':christina})
+def profile(request, profile_name="Christina"):
+    for profile_x in match_profiles['profiles']:
+        if profile_x['name'] == profile_name:
+            selected_profile = profile_x
+    try:
+        selected_profile
+    except NameError:
+        raise Http404("Profile does not exist")
+
+    logger.debug("The %s profile was selected" % (selected_profile['name']))
+
+    return render(request, "match/profile.html", {'profile':selected_profile})
 
 
 def results(request):
-    match_profiles = {'profiles':[christina, ian, jason, amy]}
 
     for profile in match_profiles['profiles']:
 

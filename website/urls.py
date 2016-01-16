@@ -19,7 +19,7 @@ urlpatterns = patterns('',
 
     url(r'^results', 'match.views.results'),
     url(r'^profiles', 'match.views.profiles'),
-    url(r'^profile', 'match.views.profile'),
+    url(r'^profile/(?P<profile_name>[^/]+)/', 'match.views.profile'),
     url(r'^search', 'match.views.home'),
     url(r'^$', 'match.views.home'),
 )
