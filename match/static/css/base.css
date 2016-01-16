@@ -1,6 +1,9 @@
 body {
   padding-top: 50px;
 }
+#navbar .navbar-right input {
+    width:100px;
+}
 .search-center {
   padding: 40px 15px;
   text-align: center;
