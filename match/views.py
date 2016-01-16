@@ -15,6 +15,9 @@ amy = {'name':'Amy','description':'amazon warrior princess'}
 def home(request):
     return render(request, "match/search.html")
 
+def profiles(request):
+    return render(request, "match/profiles.html", {'profile':christina})
+
 def profile(request):
     return render(request, "match/profile.html", {'profile':christina})
 
