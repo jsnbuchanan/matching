@@ -1,3 +1,4 @@
+git+git://github.com/django-nonrel/django@nonrel-1.5
 django-bower==5.0.4
 django-mongodb-engine==0.6.0
 django-social-auth==0.7.28
